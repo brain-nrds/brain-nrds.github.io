@@ -12,50 +12,343 @@
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
+  <link rel="icon" href="./static/images/brain_nerds_logo.png">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+  <style>
+    table img {
+      width: 100%;
+      /* height: 200px; */
+      object-fit: cover;
+      display: block;
+    }
+    
+    td {
+      width: 16.66%;
+      vertical-align: middle;
+    }
+  </style>
 </head>
 <body>
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="https://jacobyeung.org">
+        <span class="icon">
+            <i class="fas fa-home"></i>
+        </span>
+        </a>
+      </div>
+
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Reanimating Images using Neural Representations of Dynamic Stimuli</h1>
+            <div style="text-align: center; font-size: 1.5rem; margin-bottom: 1rem;">
+              Accepted at CVPR 2025
+            </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://jacobyeung.org">Jacob Yeung</a>,</span>
+              <span class="author-block">
+                <a href="https://andrewluo.net/">Andrew F. Luo</a>,
+              <span class="author-block">
+                <a href="https://gabesarch.me/">Gabriel Sarch</a>,
+              </span>
+              <span class="author-block">
+                <a href="https://www.maggie-henderson.com/">Margaret M. Henderson</a>,
+              </span>
+              <span class="author-block">
+                <a href="https://www.cs.cmu.edu/~deva/">Deva Ramanan</a>,
+              </span>
+              <span class="author-block">
+                <a href="https://sites.google.com/andrew.cmu.edu/tarrlab/people/michael-j-tarr">Michael J. Tarr</a>
+              </span>
+            </div>
+  
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Carnegie Mellon University</span>
+            </div>
+  
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2406.02659"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2406.02659"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Code Link. -->
+                <!-- <span class="link-block">
+                  <a href="https://github.com/google/nerfies"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                    </a>
+                </span> -->
+              </div>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="columns is-centered">
+        <!-- Jellyfish Section -->
+        <div class="column is-6">
+          <h2 class="subtitle has-text-centered">Jellyfish</h2>
+          <div class="columns is-centered">
+            <div class="column is-4" style="display: flex; flex-direction: column;">
+              <h3 class="subtitle is-6 has-text-centered" style="margin-top: auto;">Ground Truth</h3>
+              <img src="Decoding_Models_Visualizations/Jellyfish/ground_truth.gif" style="width: 100%;">
+            </div>
+            <div class="column is-4" style="display: flex; flex-direction: column;">
+              <h3 class="subtitle is-6 has-text-centered" style="white-space: nowrap;">Ours (Initial Frame)</h3>
+              <img src="Decoding_Models_Visualizations/Jellyfish/ground_truth_initial_frame_and_ours.gif" style="width: 100%;">
+            </div>
+            <div class="column is-4" style="display: flex; flex-direction: column;">
+              <h3 class="subtitle is-6 has-text-centered" style="margin-top: auto;">Ours (End to End)</h3>
+              <img src="Decoding_Models_Visualizations/Jellyfish/mindvideo_initial_frame_and_ours.gif" style="width: 100%;">
+            </div>
+          </div>
+        </div>
+
+        <!-- Plane Section -->
+        <div class="column is-6">
+          <h2 class="subtitle has-text-centered">Plane</h2>
+          <div class="columns is-centered">
+            <div class="column is-4" style="display: flex; flex-direction: column;">
+              <h3 class="subtitle is-6 has-text-centered" style="margin-top: auto;">Ground Truth</h3>
+              <img src="Decoding_Models_Visualizations/Plane/ground_truth.gif" style="width: 100%;">
+            </div>
+            <div class="column is-4" style="display: flex; flex-direction: column;">
+              <h3 class="subtitle is-6 has-text-centered" style="white-space: nowrap;">Ours (Initial Frame)</h3>
+              <img src="Decoding_Models_Visualizations/Plane/ground_truth_initial_frame_and_ours.gif" style="width: 100%;">
+            </div>
+            <div class="column is-4" style="display: flex; flex-direction: column;">
+              <h3 class="subtitle is-6 has-text-centered" style="margin-top: auto;">Ours (End to End)</h3>
+              <img src="Decoding_Models_Visualizations/Plane/mindvideo_initial_frame_and_ours.gif" style="width: 100%;">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">BrainNRDS</span> decodes motion from brain activity to reanimate static images.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            While computer vision models have made incredible strides in static image recognition, they still do not match human performance in tasks that require the understanding of complex, dynamic motion. This is notably true for real-world scenarios where embodied agents face complex and motion-rich environments.
+          </p>
+          <p>
+            Our approach, <span class="dnerf">BrainNRDS</span> (Brain-<b>N</b>eural <b>R</b>epresentations of <b>D</b>ynamic <b>S</b>timuli), leverages state-of-the-art video diffusion models to decouple static image representation from motion generation, enabling us to utilize fMRI brain activity for a deeper understanding of human responses to dynamic visual stimuli. Conversely, we also demonstrate that information about the brain's representation of motion can enhance the prediction of optical flow in artificial systems. Our novel approach leads to four main findings: (1) Visual motion, represented as fine-grained, object-level resolution optical flow, can be decoded from brain activity generated by participants viewing video stimuli; (2) Video encoders outperform image-based models in predicting video-driven brain activity; (3) Brain-decoded motion signals enable realistic video reanimation based only on the initial frame of the video; and (4) We extend prior work to achieve full video decoding from video-driven brain activity. 
+          </p>
+          <p>
+            <span class="dnerf">BrainNRDS</span> advances our understanding of how the brain represents spatial and temporal information in dynamic visual scenes. Our findings demonstrate the potential of combining brain imaging with video diffusion models for developing more robust and biologically-inspired computer vision systems.
+          </p>
+         
+      </div>
+    </div>
+    <!--/ Abstract. -->
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method</h2>
+        <div class="content has-text-justified">
+          <img src="static/images/architecture.png" alt="Architecture Diagram" style="width: 100%;">
+          <p>
+            Our method consists of a two-stages: first, we predict the object-level optical flow of the viewed video using the fMRI brain activations and initial frame of the video. Second, we use the predicted object-level optical flow to reanimate the initial frame of the video using a motion-conditioned video diffusion model, DragNUWA[1]. Our method can also use initial frames generated from fMRI activity from other methods and better predict the optical flow.
+             <!-- We extract the object-level masks using FlowSAM[1]. -->
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Motion Decoding</h2>
+        <div class="content has-text-justified">
+          <img src="static/images/decoding_epe_all_threshold.png" alt="Motion Decoding" style="width: 100%;">
+          Optical flow predictors trained with neural data (Ours) are statistically better than both generative models trained without neural data (No Brain - Stable Video Diffusion (Best) [2]) and generative models that fail to disentangle appearance and motion (MindVideo (Best) [3]). <b>We find that our method conditioned on the initial frame generated by MindVideo (Ours + MindVideo (Best)) better predicts the optical flow than MindVideo. EPE is end-point error, a common metric for optical flow evaluation.</b>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
 
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
-        <h1 class="title is-1 publication-title">Decoding Models Visualizations</h1>
-
+        <h1 class="title is-3">Decoding Models Visualizations</h1>
+        <div class="content has-text-justified">
+          We show the ground truth video, our method appleid to the ground truth initial frame, and our method applied to the initial frame generated by MindVideo (End to End decoding from fMRI).
+        </div>
         <table class="table is-bordered is-fullwidth">
           <thead>
             <tr>
               <th>Ground Truth</th>
               <th>Ground Truth + Ours</th>
-              <th>MindVideo + Ours</th>
+              <th>Ours (End to End)</th>
+              <th>Ground Truth</th>
+              <th>Ground Truth + Ours</th>
+              <th>Ours (End to End)</th>
             </tr>
           </thead>
           <tbody>
-            <!-- Jellyfish Row -->
+            <!-- Jellyfish and Woman Row -->
             <tr>
               <td><img src="Decoding_Models_Visualizations/Jellyfish/ground_truth.gif"></td>
               <td><img src="Decoding_Models_Visualizations/Jellyfish/ground_truth_initial_frame_and_ours.gif"></td>
               <td><img src="Decoding_Models_Visualizations/Jellyfish/mindvideo_initial_frame_and_ours.gif"></td>
+              <td><img src="Decoding_Models_Visualizations/Woman_in_wheatfield/ground_truth.gif"></td>
+              <td><img src="Decoding_Models_Visualizations/Woman_in_wheatfield/ground_truth_initial_frame_and_ours.gif"></td>
+              <td><img src="Decoding_Models_Visualizations/Woman_in_wheatfield/mindvideo_initial_frame_and_ours.gif"></td>
             </tr>
-            <!-- Plane Row -->
+            <!-- Deer and Eiffel Tower Row -->
             <tr>
-              <td><img src="Decoding_Models_Visualizations/Plane/ground_truth.gif"></td>
-              <td><img src="Decoding_Models_Visualizations/Plane/ground_truth_initial_frame_and_ours.gif"></td>
-              <td><img src="Decoding_Models_Visualizations/Plane/mindvideo_initial_frame_and_ours.gif"></td>
+              <td><img src="Decoding_Models_Visualizations/Deer/ground_truth.gif"></td>
+              <td><img src="Decoding_Models_Visualizations/Deer/ground_truth_initial_frame_and_ours.gif"></td>
+              <td><img src="Decoding_Models_Visualizations/Deer/mindvideo_initial_frame_and_ours.gif"></td>
+              <td><img src="Decoding_Models_Visualizations/Eiffel_Tower/ground_truth.gif"></td>
+              <td><img src="Decoding_Models_Visualizations/Eiffel_Tower/ground_truth_initial_frame_and_ours.gif"></td>
+              <td><img src="Decoding_Models_Visualizations/Eiffel_Tower/mindvideo_initial_frame_and_ours.gif"></td>
             </tr>
-            <!-- Additional rows follow the same structure -->
+            <!-- Fish and Ocean Life Row -->
+            <tr>
+              <td><img src="Decoding_Models_Visualizations/Fish/ground_truth.gif"></td>
+              <td><img src="Decoding_Models_Visualizations/Fish/ground_truth_initial_frame_and_ours.gif"></td>
+              <td><img src="Decoding_Models_Visualizations/Fish/mindvideo_initial_frame_and_ours.gif"></td>
+              <td><img src="Decoding_Models_Visualizations/Ocean_life/ground_truth.gif"></td>
+              <td><img src="Decoding_Models_Visualizations/Ocean_life/ground_truth_initial_frame_and_ours.gif"></td>
+              <td><img src="Decoding_Models_Visualizations/Ocean_life/mindvideo_initial_frame_and_ours.gif"></td>
+            </tr>
+            <!-- Person and Soldier Row -->
+            <tr>
+              <td><img src="Decoding_Models_Visualizations/Person/ground_truth.gif"></td>
+              <td><img src="Decoding_Models_Visualizations/Person/ground_truth_initial_frame_and_ours.gif"></td>
+              <td><img src="Decoding_Models_Visualizations/Person/mindvideo_initial_frame_and_ours.gif"></td>
+              <td><img src="Decoding_Models_Visualizations/Soldier/ground_truth.gif"></td>
+              <td><img src="Decoding_Models_Visualizations/Soldier/ground_truth_initial_frame_and_ours.gif"></td>
+              <td><img src="Decoding_Models_Visualizations/Soldier/mindvideo_initial_frame_and_ours.gif"></td>
+            </tr>
           </tbody>
         </table>
       </div>
     </div>
   </div>
 </section>
+
+
+
+
+<!-- Start of Selection -->
+<div class="container is-max-desktop">
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+      <h2 class="title is-3">Citation</h2>
+      <div class="content has-text-justified">
+        <pre>
+@article{yeung2024reanimating,
+  title={Reanimating Images using Neural Representations of Dynamic Stimuli},
+  author={Jacob Yeung and Andrew F. Luo and Gabriel Sarch and Margaret M. Henderson and Deva Ramanan and Michael J. Tarr},
+  year={2024},
+  eprint={2406.02659},
+  archivePrefix={arXiv},
+  primaryClass={q-bio.NC},
+  url={https://arxiv.org/abs/2406.02659},
+}
+</pre>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">References</h2>
+        <div class="content has-text-justified">
+          <ol>
+            <li>
+              Shengming Yin, Chenfei Wu, Jian Liang, Jie Shi, Houqiang Li, Gong Ming, and Nan Duan. Drag-NUWA: Fine-grained control in video generation by integrating text, image, and trajectory. 2023
+            </li>
+            <li>
+              Andreas Blattmann, Tim Dockhorn, Sumith Kulal, Daniel Mendelevitch, Maciej Kilian, Dominik Lorenz, Yam Levi, Zion English, Vikram Voleti, Adam Letts, et al. Stable video diffusion: Scaling latent video diffusion models to large datasets. arXiv preprint arXiv:2311.15127, 2023.
+            </li>
+            <li>
+              Zijiao Chen, Jiaxin Qing, and Juan Helen Zhou. Cinematic mindscapes: High-quality video reconstruction from brain activity. In Thirty-seventh Conference on Neural Information Processing Systems, 2023.
+            </li>
+          </ol> 
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <footer class="footer">
   <div class="container">

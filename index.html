@@ -132,21 +132,21 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <div class="columns is-centered">
-        <!-- Jellyfish Section -->
+        <!-- Woman in Wheatfield Section -->
         <div class="column is-6">
-          <h2 class="subtitle has-text-centered">Jellyfish</h2>
+          <h2 class="subtitle has-text-centered">Woman in Wheatfield</h2>
           <div class="columns is-centered">
             <div class="column is-4" style="display: flex; flex-direction: column;">
               <h3 class="subtitle is-6 has-text-centered" style="margin-top: auto;">Ground Truth</h3>
-              <img src="Decoding_Models_Visualizations/Jellyfish/ground_truth.gif" style="width: 100%;">
+              <img src="Decoding_Models_Visualizations/Woman_in_wheatfield/ground_truth.gif" style="width: 100%;">
             </div>
             <div class="column is-4" style="display: flex; flex-direction: column;">
-              <h3 class="subtitle is-6 has-text-centered" style="white-space: nowrap;">Ours (Initial Frame)</h3>
-              <img src="Decoding_Models_Visualizations/Jellyfish/ground_truth_initial_frame_and_ours.gif" style="width: 100%;">
+              <h3 class="subtitle is-6 has-text-centered" style="white-space: nowrap;"><span class="dnerf">BrainNRDS</span> (Ours, Initial Frame)</h3>
+              <img src="Decoding_Models_Visualizations/Woman_in_wheatfield/ground_truth_initial_frame_and_ours.gif" style="width: 100%;">
             </div>
             <div class="column is-4" style="display: flex; flex-direction: column;">
-              <h3 class="subtitle is-6 has-text-centered" style="margin-top: auto;">Ours (End to End)</h3>
-              <img src="Decoding_Models_Visualizations/Jellyfish/mindvideo_initial_frame_and_ours.gif" style="width: 100%;">
+              <h3 class="subtitle is-6 has-text-centered" style="margin-top: auto;"><span class="dnerf">BrainNRDS</span> (Ours, End to End)</h3>
+              <img src="Decoding_Models_Visualizations/Woman_in_wheatfield/mindvideo_initial_frame_and_ours.gif" style="width: 100%;">
             </div>
           </div>
         </div>
@@ -160,11 +160,11 @@
               <img src="Decoding_Models_Visualizations/Plane/ground_truth.gif" style="width: 100%;">
             </div>
             <div class="column is-4" style="display: flex; flex-direction: column;">
-              <h3 class="subtitle is-6 has-text-centered" style="white-space: nowrap;">Ours (Initial Frame)</h3>
+              <h3 class="subtitle is-6 has-text-centered" style="white-space: nowrap;"><span class="dnerf">BrainNRDS</span> (Ours, Initial Frame)</h3>
               <img src="Decoding_Models_Visualizations/Plane/ground_truth_initial_frame_and_ours.gif" style="width: 100%;">
             </div>
             <div class="column is-4" style="display: flex; flex-direction: column;">
-              <h3 class="subtitle is-6 has-text-centered" style="margin-top: auto;">Ours (End to End)</h3>
+              <h3 class="subtitle is-6 has-text-centered" style="margin-top: auto;"><span class="dnerf">BrainNRDS</span> (Ours, End to End)</h3>
               <img src="Decoding_Models_Visualizations/Plane/mindvideo_initial_frame_and_ours.gif" style="width: 100%;">
             </div>
           </div>
@@ -206,11 +206,11 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Method</h2>
+        <h2 class="title is-3"><span class="dnerf">BrainNRDS</span> Method</h2>
         <div class="content has-text-justified">
-          <img src="static/images/architecture.png" alt="Architecture Diagram" style="width: 100%;">
+          <img src="static/images/arch.gif" alt="Architecture Diagram" style="width: 100%;">
           <p>
-            Our method consists of a two-stages: first, we predict the object-level optical flow of the viewed video using the fMRI brain activations and initial frame of the video. Second, we use the predicted object-level optical flow to reanimate the initial frame of the video using a motion-conditioned video diffusion model, DragNUWA[1]. Our method can also use initial frames generated from fMRI activity from other methods and better predict the optical flow.
+            Our method (<span class="dnerf">BrainNRDS</span>) consists of a two-stages: first, we predict the object-level optical flow of the viewed video using the fMRI brain activations and initial frame of the video. Second, we use the predicted object-level optical flow to reanimate the initial frame of the video using a motion-conditioned video diffusion model, DragNUWA[1]. Our method can also use initial frames generated from fMRI activity from other methods and better predict the optical flow.
              <!-- We extract the object-level masks using FlowSAM[1]. -->
           </p>
         </div>
@@ -246,11 +246,11 @@
           <thead>
             <tr>
               <th>Ground Truth</th>
-              <th>Ground Truth + Ours</th>
-              <th>Ours (End to End)</th>
+              <th><span class="dnerf"></span>BrainNRDS</span> (Ours, Initial Frame)</th>
+              <th><span class="dnerf">BrainNRDS</span> (Ours, End to End)</th>
               <th>Ground Truth</th>
-              <th>Ground Truth + Ours</th>
-              <th>Ours (End to End)</th>
+              <th><span class="dnerf">BrainNRDS</span> (Ours, Initial Frame)</th>
+              <th><span class="dnerf">BrainNRDS</span> (Ours, End to End)</th>
             </tr>
           </thead>
           <tbody>
